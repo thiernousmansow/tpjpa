@@ -41,11 +41,21 @@ public class Friend {
 	public void setId_friend(long id_friend) {
 		this.id_friend = id_friend;
 	}
-
-	public String getName() {
-		return name;
-	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public void setName(String name) {
 		this.name = name;
 	}

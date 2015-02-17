@@ -19,8 +19,8 @@ public class Heater extends Device {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Heater(String model_equipement, String conso_equipment, Home home) {
-		super(model_equipement, conso_equipment, home);
+	public Heater(String model_equipement, String conso_equipment) {
+		super(model_equipement, conso_equipment);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -21,9 +21,9 @@ public class Home {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long num_home;
-	private Long superficie;
-	private Long nbr_piece;
+	private int num_home;
+	private int superficie;
+	private int nbr_piece;
 	private String adresse;
 	private String adresseIP;
 	@ManyToOne
@@ -38,32 +38,32 @@ public class Home {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Home(Long superficie, Long nbr_piece, String adresse,
-			String adresseIP, Person person) {
+	public Home(int superficie, int nbr_piece, String adresse,
+			String adresseIP) {
 		super();
 		this.superficie = superficie;
 		this.nbr_piece = nbr_piece;
 		this.adresse = adresse;
 		this.adresseIP = adresseIP;
-		this.person = person;
+	
 	}
 
-	public Long getNum_home() {
+	public int getNum_home() {
 		return num_home;
 	}
 
 
-	public void setNum_home(Long num_home) {
+	public void setNum_home(int num_home) {
 		this.num_home = num_home;
 	}
 
 
-	public Long getSuperficie() {
+	public int getSuperficie() {
 		return superficie;
 	}
 
 
-	public void setSuperficie(Long superficie) {
+	public void setSuperficie(int superficie) {
 		this.superficie = superficie;
 	}
 
@@ -106,7 +106,5 @@ public class Home {
 	public void setDevices(List<Device> devices) {
 		Devices = devices;
 	}
-
-
 
 }

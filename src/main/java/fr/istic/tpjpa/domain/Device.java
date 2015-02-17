@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,7 +32,7 @@ public class Device {
 	private Long num_equipement;
 	private String model_equipement;
 	private String conso_equipment;
-	@ManyToOne
+	@ManyToOne(fetch= FetchType.LAZY)
  	@JoinColumn(name="num_home")
 	private Home home;
 
@@ -40,11 +41,11 @@ public class Device {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Device(String model_equipement, String conso_equipment, Home home) {
+	public Device(String model_equipement, String conso_equipment) {
 		super();
 		this.model_equipement = model_equipement;
 		this.conso_equipment = conso_equipment;
-		this.home = home;
+	
 	}
 	public Long getNum_equipement() {
 		return num_equipement;

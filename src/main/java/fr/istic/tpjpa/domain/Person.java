@@ -14,19 +14,23 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.CascadeType;
 @Entity
 @Table(name="Person")
 public class Person {
 
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id_person;
+	private Long id_person;
 	
 	private String name;
 	private String mail;
 	private String gender;
+	
 	private Date  date_naiss;
 	private String profil_facebook;
 	@OneToMany(mappedBy="person")
@@ -42,7 +46,15 @@ public class Person {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-    
+	public Person(String name, String mail, String gender, Date date_naiss,
+			String profil_facebook) {
+		super();
+		this.name = name;
+		this.mail = mail;
+		this.gender = gender;
+		this.date_naiss = date_naiss;
+		this.profil_facebook = profil_facebook;
+	}
 	public long getId_person() {
 		return id_person;
 	}

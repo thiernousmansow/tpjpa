@@ -18,9 +18,8 @@ public class ElectronicDevice extends Device {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ElectronicDevice(String model_equipement, String conso_equipment,
-			Home home) {
-		super(model_equipement, conso_equipment, home);
+	public ElectronicDevice(String model_equipement, String conso_equipment) {
+		super(model_equipement, conso_equipment);
 		// TODO Auto-generated constructor stub
 	}
 }
